@@ -483,3 +483,39 @@ nav {
   font-size: 20px; /* Adjust icon size */
   margin-right: 5px; /* Add some space between icon and text */
 }
+
+
+.features-section {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.feature {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(35, 45, 45, 0.1));  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.2), rgba(35, 45, 45, 0.8)); /* Top-left to bottom-right gradient *//* Black background with opacity */
+  border: 2px solid #9c9a9a; /* White border */
+  border-radius: 15px; /* Rounded corners */
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  width: 150px;
+  color: #fff; /* White text */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-10px); /* Lift effect on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Shadow on hover */
+}
+
+.icon {
+  display: inline-block; /* Ensures the icon has a width and height */
+    font-size: 40px; /* Adjust size as needed */
+    width: auto;
+    margin: 5px;
+}
+
+.feature h3 {
+  margin: 0;
+  font-size: 20px; /* Text size */
+}
