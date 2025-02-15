@@ -64,3 +64,53 @@ ScrollReveal().reveal(".portfolio__card", {
   duration: 1000,
   interval: 500,
 });
+
+// script.js
+document.addEventListener("DOMContentLoaded", function () {
+  const navItems = document.querySelectorAll(".nav-item");
+  const projectSections = document.querySelectorAll(".project-section");
+
+  // Function to switch sections
+  function switchSection(sectionId) {
+    // Hide all sections
+    projectSections.forEach((section) => {
+      section.classList.remove("active");
+    });
+
+    // Show the selected section
+    const activeSection = document.getElementById(sectionId);
+    if (activeSection) {
+      activeSection.classList.add("active");
+      animateProjectCards(activeSection);
+    }
+
+    // Update active nav item
+    navItems.forEach((item) => {
+      item.classList.remove("active");
+      if (item.getAttribute("data-section") === sectionId) {
+        item.classList.add("active");
+      }
+    });
+  }
+
+  // Function to animate project cards
+  function animateProjectCards(section) {
+    const projectCards = section.querySelectorAll(".project-card");
+    projectCards.forEach((card, index) => {
+      setTimeout(() => {
+        card.classList.add("animate");
+      }, index * 300); // Delay each card's animation
+    });
+  }
+
+  // Add click event listeners to nav items
+  navItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      const sectionId = item.getAttribute("data-section");
+      switchSection(sectionId);
+    });
+  });
+
+  // Initialize with the first section active
+  switchSection("website");
+});

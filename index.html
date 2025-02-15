@@ -69,7 +69,7 @@
       <div class="about__image">
         <img src="assets/bg.png" alt="bg" class="about__bg-1" />
         <img src="assets/bg.png" alt="bg" class="about__bg-2" />
-        <img src="assets/image.png" alt="about" class="about__img" />
+        <img src="assets/imageabout.png" alt="about" class="about__img" />
       </div>
       <div class="about__content">
         <h2 class="section__header">Bit About Me</h2>
@@ -143,32 +143,76 @@
     </section>
 
     <section class="section__container portfolio__container" id="portfolio">
-      <h2 class="section__header">My Portfolio</h2>
-      <p class="section__description">
-        Explore a showcase of my diverse projects, demonstrating my skills in
-        web development, design, and beyond. Each project reflects my passion
-        for creating impactful and innovative digital experiences.
-      </p>
-      <div class="portfolio__grid">
-        <div class="portfolio__card">
-          <img src="assets/project-1.jpg" alt="portfolio" />
+        <!-- Navbar -->
+        <div class="navbar">
+          <div class="navbar-container">
+            <div class="project-title">Project Dashboard</div>
+            <ul class="nav-items">
+              <li class="nav-item active" data-section="website">Website</li>
+              <li class="nav-item" data-section="erp">ERP</li>
+              <li class="nav-item" data-section="mobile">Mobile</li>
+            </ul>
+          </div>
         </div>
-        <div class="portfolio__card">
-          <img src="assets/project-2.jpg" alt="portfolio" />
+      
+        <!-- Project Sections -->
+        <div class="content">
+          <!-- Website Projects -->
+          <div id="website" class="project-section active">
+            <h2>Website Projects</h2>
+            <div class="project-list">
+              <div class="project-card">
+                <img src="assets/walet.png" alt="portfolio" />
+                <h3>Walet For  Student</h3>
+                <p>Description of Website Project 1.</p>
+              </div>
+              <div class="project-card">
+                <img src="assets/ecommerce.png" alt="portfolio" />
+                <h3>Website Project 2</h3>
+                <p>Description of Website Project 2.</p>
+              </div>
+              <div class="project-card">
+                <img src="assets/driver.png" alt="portfolio" />
+                <h3>Website Project 3</h3>
+                <p>Description of Website Project 3.</p>
+              </div>
+            </div>
+          </div>
+      
+          <!-- ERP Projects -->
+          <div id="erp" class="project-section">
+            <h2>ERP Projects</h2>
+            <div class="project-list">
+              <div class="project-card">
+                <img src="assets/cafe.png" alt="portfolio" />
+                <h3>ERP Project 1</h3>
+                <p>Description of ERP Project 1.</p>
+              </div>
+              <div class="project-card">
+                <img src="assets/school.png" alt="portfolio" />
+                <h3>ERP Project 2</h3>
+                <p>Description of ERP Project 2.</p>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Mobile Projects -->
+          <div id="mobile" class="project-section">
+            <h2>Mobile Projects</h2>
+            <div class="project-list">
+              <div class="project-card">
+                <img src="assets/medicine.png" alt="portfolio" />
+                <h3>Mobile Project 1</h3>
+                <p>Description of Mobile Project 1.</p>
+              </div>
+              <div class="project-card">
+                <img src="assets/image.png" alt="portfolio" />
+                <h3>Mobile Project 2</h3>
+                <p>Description of Mobile Project 2.</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="portfolio__card">
-          <img src="assets/project-3.jpg" alt="portfolio" />
-        </div>
-        <div class="portfolio__card">
-          <img src="assets/project-4.jpg" alt="portfolio" />
-        </div>
-        <div class="portfolio__card">
-          <img src="assets/project-5.jpg" alt="portfolio" />
-        </div>
-        <div class="portfolio__card">
-          <img src="assets/project-6.jpg" alt="portfolio" />
-        </div>
-      </div>
       <div class="portfolio__banner">
         <div class="portfolio__banner__card">
           <span><i class="ri-macbook-line"></i></span>

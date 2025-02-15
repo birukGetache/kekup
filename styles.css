@@ -519,3 +519,156 @@ nav {
   margin: 0;
   font-size: 20px; /* Text size */
 }
+/* General Styles */
+
+/* Navbar Styles */
+.navbar {
+
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+.nav-items {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin-left: 20px;
+  cursor: pointer;
+  color: var(--secondary-color);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+  color: var(--primary-color);
+}
+
+.nav-item.active {
+  color: #ff7300;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-items {
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+
+  .nav-item {
+    margin: 5px 10px;
+  }
+}
+/* Content Styles */
+.content {
+  padding: 80px 20px 20px; /* Adjusted for fixed navbar */
+}
+
+.project-section {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.project-section.active {
+  display: block;
+  opacity: 1;
+}
+
+/* Project List Styles */
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.project-card {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  width: calc(33.333% - 20px); /* 3 cards per row on larger screens */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-card h3 {
+  margin: 15px;
+  font-size: 1.25rem;
+  color: #333;
+}
+
+.project-card p {
+  margin: 0 15px 15px;
+  color: #666;
+}
+
+/* Animation for Project Cards */
+.project-card.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Styles for Tablets */
+@media (max-width: 1024px) {
+  .project-card {
+    width: calc(50% - 20px); /* 2 cards per row on tablets */
+  }
+}
+
+/* Responsive Styles for Mobile Devices */
+@media (max-width: 768px) {
+  .project-card {
+    width: 100%; /* 1 card per row on mobile */
+  }
+
+  .project-list {
+    gap: 15px; /* Reduce gap for smaller screens */
+  }
+
+  .project-card img {
+    height: 150px; /* Adjust image height for mobile */
+  }
+
+  .project-card h3 {
+    font-size: 1.1rem; /* Slightly smaller font size for mobile */
+  }
+
+  .project-card p {
+    font-size: 0.9rem; /* Slightly smaller font size for mobile */
+  }
+}
